@@ -12,7 +12,7 @@ web/app/uploads/*
 
 # WordPress
 web/wp
-web/.htaccess
+!web/.htaccess
 
 # Dotenv
 .env
