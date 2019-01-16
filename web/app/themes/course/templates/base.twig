@@ -6,19 +6,38 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
+
+
+
+	<body class="{{body_class}} blog" data-template="base.twig">
+		<div class="wrapper">
+
+			<!--===================== Header ========================-->
+			<header class="header-type-2">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-xl-3 col-lg-3">
+							<a href="{{site.url}}">
+								<img src="{{ site.theme.link }}/assets/img/logo.png" class="logo" alt="images">
+							</a>
+						</div>
+						<div class="col-xl-9 col-lg-9 text-right">
+							<!--===================== Header Block ========================-->
+							<div class="header-block">
+
+                                {% include "menu.twig" with {'menu': menu.get_items} %}
+
+								<div class="text-center">
+									<a href="contact.html" class="blue-brd-btn">Get In Touch</a>
+								</div>
+							</div>
+							<button class="mobile-btn">
+								<span></span>
+							</button>
+							<!--===================== End of Header Block ========================-->
+						</div>
+					</div>
 				</div>
-			{% endblock %}
 		</header>
 
 		<section id="content" role="main" class="content-wrapper">

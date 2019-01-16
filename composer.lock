@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ad31095ccd775874aaf44e7dd6efb21",
+    "content-hash": "ac32aba83c08e8b20ce04ebc42734387",
     "packages": [
         {
             "name": "composer/installers",
@@ -170,16 +170,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.0.1",
+            "version": "4.9.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.0.1"
+                "reference": "4.9.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.0.1",
-                "reference": "5.0.1",
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/4.9.9",
+                "reference": "4.9.9",
                 "shasum": null
             },
             "require": {
@@ -204,7 +204,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-12-13T04:12:29+00:00"
+            "time": "2018-12-13T04:12:34+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -412,36 +412,16 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
-            "name": "wpackagist-plugin/meow-gallery",
-            "version": "3.2.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/meow-gallery/",
-                "reference": "tags/3.2.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/meow-gallery.3.2.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/meow-gallery/"
-        },
-        {
             "name": "wpackagist-plugin/timber-library",
-            "version": "1.8.3",
+            "version": "1.8.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/timber-library/",
-                "reference": "tags/1.8.3"
+                "reference": "tags/1.8.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/timber-library.1.8.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/timber-library.1.8.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -459,12 +439,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "3557820049b07ea0fd088e4151ec200f474b58de"
+                "reference": "f370ac042dba652a93b6b1f330b33d86f3778b57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3557820049b07ea0fd088e4151ec200f474b58de",
-                "reference": "3557820049b07ea0fd088e4151ec200f474b58de",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f370ac042dba652a93b6b1f330b33d86f3778b57",
+                "reference": "f370ac042dba652a93b6b1f330b33d86f3778b57",
                 "shasum": ""
             },
             "conflict": {
@@ -561,7 +541,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.15.2",
+                "simplesamlphp/simplesamlphp": "<1.16.3",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "slim/slim": "<2.6",
                 "smarty/smarty": "<3.1.33",
@@ -653,20 +633,20 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-12-14T13:12:19+00:00"
+            "time": "2018-12-23T19:42:44+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.3.2",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "6ad28354c04b364c3c71a34e4a18b629cc3b231e"
+                "reference": "379deb987e26c7cd103a7b387aea178baec96e48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6ad28354c04b364c3c71a34e4a18b629cc3b231e",
-                "reference": "6ad28354c04b364c3c71a34e4a18b629cc3b231e",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/379deb987e26c7cd103a7b387aea178baec96e48",
+                "reference": "379deb987e26c7cd103a7b387aea178baec96e48",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +684,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-09-23T23:08:17+00:00"
+            "time": "2018-12-19T23:57:18+00:00"
         }
     ],
     "aliases": [],
