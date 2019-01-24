@@ -1,4 +1,7 @@
 <?php
+require 'libs/additional.php';
+require 'libs/assets.php';
+
 /**
  * Timber starter-theme
  * https://github.com/timber/starter-theme

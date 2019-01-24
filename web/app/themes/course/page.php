@@ -22,6 +22,8 @@
  */
 
 $context = Timber::get_context();
-$post = new TimberPost();
-$context['post'] = $post;
+
+$context['post'] = new TimberPost();
+$context['currentTime'] = time();
+
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

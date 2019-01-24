@@ -5,6 +5,9 @@
 
 use Roots\WPConfig\Config;
 
+Config::define('DISALLOW_FILE_MODS', false);
+
+
 /**
  * You should try to keep staging as close to production as possible. However,
  * should you need to, you can always override production configuration values

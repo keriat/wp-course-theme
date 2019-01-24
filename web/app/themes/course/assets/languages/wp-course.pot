@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Wordpress Beginner's Course First edition"
+msgstr ""
+
+msgid "Keriat | Fruitware.ru"
+msgstr ""
