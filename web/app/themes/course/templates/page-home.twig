@@ -14,22 +14,7 @@
                 <div class="col-xl-9 col-lg-9 col-md-12 text-right">
                     <!--===================== Header Block ========================-->
                     <div class="header-block">
-                        <ul class="nav-menu list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="{{ site.theme.link }}/trade-currency.html">Trade Currency<span>-</span></a></li>
-                            <li class="list-inline-item"><a href="{{ site.theme.link }}/about-us.html">About Us<span>-</span></a></li>
-                            <li class="list-inline-item top-sub-menu">
-                                <a href="{{ site.theme.link }}/contact.html">Support<span>-</span></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="{{ site.theme.link }}/contact.html">Contact</a></li>
-                                        <li><a href="{{ site.theme.link }}/faq.html">FAQ</a></li>
-                                        <li><a href="{{ site.theme.link }}/404.html">404 Page</a></li>
-                                    </ul>
-                                </div><!--sub-menu-->
-                            </li><!--top-sub-menu"-->
-                            <li class="list-inline-item"><a href="{{ site.theme.link }}/blog-grid.html">Blog<span>-</span></a></li>
-                            <li class="list-inline-item"><a href="{{ site.theme.link }}/calculator.html">Currency Calculator<span>-</span></a></li>
-                        </ul>
+                        {% include 'menu.twig' %}
                         <div class="text-center">
                             <a href="{{ site.theme.link }}/contact.html" class="blue-brd-btn">Get In Touch</a>
                         </div>
@@ -216,6 +201,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
+
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 text-center">
                             <a href="{{ site.theme.link }}/about-us.html" class="images">
@@ -234,13 +220,17 @@
                         </div>
                     </div>
                     <div class="grid masonry">
+
+                        {% for member in team %}
                         <div class="grid-item grid-item-width1">
                             <a href="{{ site.theme.link }}/about-us.html" class="images130">
                                 <img src="{{ site.theme.link }}/assets/img/team2.png" alt="team">
-                                <h5>Nil Goldman</h5>
+                                <h5>{{ member.title }}</h5>
                                 <span>Ceo &amp; Founder</span>
                             </a>
                         </div>
+                        {% endfor %}
+
                         <div class="grid-item grid-item-width1 text-right">
                             <a href="{{ site.theme.link }}/about-us.html" class="images100">
                                 <img src="{{ site.theme.link }}/assets/img/team3.png" alt="team">
@@ -625,41 +615,42 @@
     <footer>
         <div class="container">
             <div class="row footer-menu-wrap">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="logo">
-                        <a href="{{ site.theme.link }}//"><img src="{{ site.theme.link }}/assets/img/footer-logo.png" alt="images"></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-12">
-                    <div class="inside-column">
-                        <h4 class="title">Company</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="{{ site.theme.link }}//">Home</a></li>
-                            <li><a href="{{ site.theme.link }}/trade-currency.html">Trade Currency</a></li>
-                            <li><a href="{{ site.theme.link }}/about-us.html">Career</a></li>
-                            <li><a href="{{ site.theme.link }}/contact.html">Support</a></li>
-                            <li><a href="{{ site.theme.link }}/blog-grid.html">Blog</a></li>
-                            <li><a href="{{ site.theme.link }}/calculator.html">Currency Calculator</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-2 col-md-6 col-12">
-                    <div class="inside">
-                        <h4 class="title">{{ __('Support', 'wp-course') }}</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="{{ site.theme.link }}/contact.html">Contact Us</a></li>
-                            <li><a href="{{ site.theme.link }}/faq.html">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <h4 class="title">Contact</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ site.theme.link }}/#">info@Cryptocurrency.com</a></li>
-                        <li>+44 765 867 87</li>
-                    </ul>
-                </div>
+                {{ sidebar_footer }}
+                {#<div class="col-xl-4 col-lg-4 col-md-6 col-12">#}
+                    {#<div class="logo">#}
+                        {#<a href="{{ site.theme.link }}//"><img src="{{ site.theme.link }}/assets/img/footer-logo.png" alt="images"></a>#}
+                        {#<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-3 col-lg-3 col-md-6 col-12">#}
+                    {#<div class="inside-column">#}
+                        {#<h4 class="title">Company</h4>#}
+                        {#<ul class="list-unstyled">#}
+                            {#<li><a href="{{ site.theme.link }}//">Home</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/trade-currency.html">Trade Currency</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/about-us.html">Career</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/contact.html">Support</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/blog-grid.html">Blog</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/calculator.html">Currency Calculator</a></li>#}
+                        {#</ul>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-3 col-lg-2 col-md-6 col-12">#}
+                    {#<div class="inside">#}
+                        {#<h4 class="title">{{ __('Support', 'wp-course') }}</h4>#}
+                        {#<ul class="list-unstyled">#}
+                            {#<li><a href="{{ site.theme.link }}/contact.html">Contact Us</a></li>#}
+                            {#<li><a href="{{ site.theme.link }}/faq.html">FAQ</a></li>#}
+                        {#</ul>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-xl-2 col-lg-3 col-md-6 col-12">#}
+                    {#<h4 class="title">Contact</h4>#}
+                    {#<ul class="list-unstyled">#}
+                        {#<li><a href="{{ site.theme.link }}/#">info@Cryptocurrency.com</a></li>#}
+                        {#<li>+44 765 867 87</li>#}
+                    {#</ul>#}
+                {#</div>#}
             </div>
         </div>
         <!--===================== Copyright ========================-->

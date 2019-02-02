@@ -1,9 +1,27 @@
-{% if menu %}
+{% if header_menu %}
+	{#<ul class="nav-menu list-unstyled list-inline">#}
+		{#<li class="list-inline-item"><a href="{{ site.theme.link }}/trade-currency.html">Trade Currency<span>-</span></a></li>#}
+		{#<li class="list-inline-item"><a href="{{ site.theme.link }}/about-us.html">About Us<span>-</span></a></li>#}
+		{#<li class="list-inline-item top-sub-menu">#}
+			{#<a href="{{ site.theme.link }}/contact.html">Support<span>-</span></a>#}
+			{#<div class="sub-menu">#}
+				{#<ul>#}
+					{#<li><a href="{{ site.theme.link }}/contact.html">Contact</a></li>#}
+					{#<li><a href="{{ site.theme.link }}/faq.html">FAQ</a></li>#}
+					{#<li><a href="{{ site.theme.link }}/404.html">404 Page</a></li>#}
+				{#</ul>#}
+			{#</div><!--sub-menu-->#}
+		{#</li><!--top-sub-menu"-->#}
+		{#<li class="list-inline-item"><a href="{{ site.theme.link }}/blog-grid.html">Blog<span>-</span></a></li>#}
+		{#<li class="list-inline-item"><a href="{{ site.theme.link }}/calculator.html">Currency Calculator<span>-</span></a></li>#}
+	{#</ul>#}
 	<ul class="nav-menu list-unstyled list-inline">
-	{% for item in menu %}
+	{% for item in header_menu.items %}
 		<li class="list-inline-item {{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }} <span>-</span></a>
-			{% include "menu.twig" with {'menu': item.get_children} %}
+            {% if item.children %}
+			{#{% include "menu.twig" with {'menu': item.get_children} %}#}
+			{% endif %}
 		</li>
 	{% endfor %}
 	</ul>
