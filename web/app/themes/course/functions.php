@@ -1,6 +1,7 @@
 <?php
 require 'libs/additional.php';
 require 'libs/assets.php';
+require 'libs/ajax.php';
 
 /**
  * Timber starter-theme

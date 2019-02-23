@@ -40,7 +40,8 @@
     "roots/wordpress": "4.*",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wpackagist-plugin/timber-library": "*"
+    "wpackagist-plugin/timber-library": "*",
+    "wpackagist-plugin/wp-mail-smtp": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
